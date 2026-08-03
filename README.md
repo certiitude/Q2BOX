@@ -1,6 +1,6 @@
 # Q2BOX — `.apk` Oculus → PCVR (Windows) Overlay Layer
 
-A local emulation tool attempting to run **Quest** VR games (Oculus `.apk`) on a Windows PC using **3 core components**: (using QEMU)
+A local emulation tool attempting to run **Quest** VR games (Oculus `.apk`) on a Windows PC using QEMU and **3 core components**:
 
 1. **Android ARM64 Emulation** (QEMU `qemu-system-aarch64` backend or Android Studio SDK) — boots an Android ARM system image and installs the APK.
 2. **Oculus Bypass** — patches `smali`/entitlements, spoofs Quest device identity (`ro.product.*`), then decompiles, rebuilds, and re-signs the APK.
