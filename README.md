@@ -24,6 +24,21 @@ A local emulation tool attempting to run **Quest** VR games (Oculus `.apk`) on a
 
 ---
 
+## 💻 PC System Requirements
+
+The hardware requirements for **Q2BOX** are split into two tiers: the baseline specs required to run the current build tools, asset unpackers, and headless translation workflows, and the recommended specs to expect a **somehow "smooth" gameplay experience** (60–72+ FPS stereo rendering) once the visual pipeline is integrated.
+
+| Component | Minimum Requirements (Build / Headless Preview) | Recommended Requirements (To expect "smooth" gameplay) |
+| :--- | :--- | :--- |
+| **OS** | Windows 10 (64-bit, v1909 or higher) | Windows 11 (64-bit) |
+| **Processor (CPU)** | Intel Core i5-8400 / AMD Ryzen 5 2600 (6 Cores with AVX2 support) | Intel Core i7-12700K / AMD Ryzen 7 5800X or higher (High single-core & multi-thread IPC) |
+| **Memory (RAM)** | 16 GB DDR4 | 32 GB DDR4/DDR5 (High speed required for real-time asset streaming) |
+| **Graphics (GPU)** | NVIDIA GTX 1060 / AMD RX 580 (6GB VRAM) | NVIDIA RTX 3070 / AMD RX 6700 XT or better (For dual-eye stereo OpenXR presentation) |
+| **Storage** | 20 GB free space (SATA SSD / HDD) | 50 GB free space (NVMe M.2 SSD required) |
+| **Software Stack** | Python 3.10+, Java JDK 11+, VS2022 Build Tools | Python 3.11+, OpenXR Tools for Windows, Latest GPU Drivers |
+
+---
+
 ## Installation
 
 External tool prerequisites (configurable in `config.json` → `tools`):
