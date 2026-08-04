@@ -88,7 +88,9 @@ rem Capture the emulator display window
 python main.py capture --title QUESTBOX --frames 60
 ```
 
-Or via `questbox.bat` (idempotent shell shortcut: `questbox run my_game.apk`).
+Or via `questbox-gui.bat` (idempotent shell shortcut: `questbox run my_game.apk`).
+
+<img width="1131" height="768" alt="{C171A274-72CC-433D-B642-6DB7ABA1422E}" src="https://github.com/user-attachments/assets/2ce02bb8-352b-4680-9c59-6bce23db50f5" />
 
 ---
 
@@ -144,3 +146,16 @@ Then run `python main.py xr install` from the project root.
 - This is a **reverse-engineering** tool designed for developers, research, and educational testing.
 - Meta/Oculus actively combats entitlement bypasses; this framework should only be used with APKs you own or have explicit rights to redistribute (e.g., your own dev builds / personal sideloads).
 - On Windows hosts, **there is no native ARM GPU acceleration** inside the emulator: TCG-translated execution is inherently slow (~10–20 FPS, suitable for testing logic, not 72 Hz real-time gameplay).
+
+---
+
+## 🚦 Current Project Status & Functional Scope
+
+While the underlying core components of Q2BOX are functional and operating as intended, the software is currently in an early development phase:
+
+* **Core Pipeline:** Functional. The tool successfully unpacks APK packages, parses ARM64 binaries, translates `.so` libraries to `.dll`, and initializes the headless boot sequence.
+* **VR Controls & Input Translation:** **Not yet implemented.** Virtual Reality controller mapping (6DoF tracking, trigger inputs, grip sensors, thumbsticks) and haptic feedback translation layers from Android OpenXR/OVR input structs to Windows OpenXR input actions are currently unmapped. Inputs are either ignored or stubbed.
+* **Rendering & Display:** Frame buffer capture and stereo swapchain presentation are stubbed out; visual rendering output is disabled in this preview build.
+
+* <img width="809" height="516" alt="image" src="https://github.com/user-attachments/assets/edc755ee-c985-4f32-bbd8-cb8521f2e87d" />
+
